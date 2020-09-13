@@ -32,7 +32,6 @@ describe('TargetAggregateIdentifier', () => {
 
     describe('when DecoratorCommandTargetAggregateResolver.resolveTarget is invoked on that command', () => {
       const versionedAggregateId = DecoratorCommandTargetAggregateResolver.instance.resolveTarget(command);
-      console.log("versionedAggregateId: " + JSON.stringify(versionedAggregateId));
       it('then the result should contain the expected aggregate identifier', () => {
         expect(versionedAggregateId.identifier).toBe(expectedAggregateIdentifier);
       });

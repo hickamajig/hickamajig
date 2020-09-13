@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "importHelpers": true,
+    "removeComments": false,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es2017",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "allowJs": false,
+    "strict": true,
+    "strictNullChecks": true,
+    "noEmit": true
+  },
+  "exclude": [
+    "../node_modules",
+  ]
+}

@@ -1,0 +1,31 @@
+# dependencies
+node_modules/
+
+# IDE
+/.idea
+/.awcache
+/.vscode
+*.code-workspace
+
+# build 
+dist/
+
+# documentation
+doc/
+
+# misc
+.DS_Store
+lerna-debug.log
+npm-debug.log
+yarn-error.log
+/**/npm-debug.log
+/modules/**/.npmignore
+/modules/**/LICENSE
+
+# tests
+/test
+/benchmarks/memory
+/coverage
+/.nyc_output
+/benchmarks/memory
+build/config\.gypi

@@ -59,12 +59,7 @@ export const TargetAggregateVersion = CommandTargetAggregateMetadataDecoratorFac
  * metadata using reflection metadata specified using the {@link TargetAggregateIdentifier} 
  * and {@link TargetAggregateVersion} decorators.
  */
-export class DecoratorCommandTargetAggregateResolver implements CommandTargetAggregateResolver {
-
-  /**
-   * Singleton instance.
-   */
-  public static readonly instance = new DecoratorCommandTargetAggregateResolver();
+export const decoratorCommandTargetAggregateResolver: CommandTargetAggregateResolver = {
 
   resolveTarget<TPayload>(command: CommandMessage<TPayload>): VersionedAggregateIdentifier {  
     const payload = command.payload;
@@ -84,4 +79,4 @@ export class DecoratorCommandTargetAggregateResolver implements CommandTargetAgg
         : undefined
     }
   }
-}
+};

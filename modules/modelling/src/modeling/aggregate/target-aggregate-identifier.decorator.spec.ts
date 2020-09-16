@@ -1,4 +1,4 @@
-import { TargetAggregateIdentifier, TargetAggregateVersion, DecoratorCommandTargetAggregateResolver } from './target-aggregate-identifier.decorator';
+import { TargetAggregateIdentifier, TargetAggregateVersion, decoratorCommandTargetAggregateResolver } from './target-aggregate-identifier.decorator';
 import { CommandMessage } from '@goldsam/eventi-messaging';
 
 class MyCommandPayload {
@@ -31,7 +31,7 @@ describe('TargetAggregateIdentifier', () => {
     };
 
     describe('when DecoratorCommandTargetAggregateResolver.resolveTarget is invoked on that command', () => {
-      const versionedAggregateId = DecoratorCommandTargetAggregateResolver.instance.resolveTarget(command);
+      const versionedAggregateId = decoratorCommandTargetAggregateResolver.resolveTarget(command);
       it('then the result should contain the expected aggregate identifier', () => {
         expect(versionedAggregateId.identifier).toBe(expectedAggregateIdentifier);
       });

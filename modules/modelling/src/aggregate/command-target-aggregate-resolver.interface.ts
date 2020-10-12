@@ -1,20 +1,10 @@
 import { CommandMessage } from '@goldsam/eventi-messaging';
 
-export interface VersionedAggregateIdentifier {
-  /**
-   * Identifier of the targeted Aggregate. 
-   */
-  identifier: string;
-
-  /**
-   * Version of the targeted Aggregate, or {@code undefined} if the version is irrelevant.
-   */
-  version: number | undefined;
-}
+import { VersionedAggregateIdentifier } from './versioned-aggregate-identifier.interface';
 
 /**
- * Resolve an aggregate identifier and version from a command that identifies the aggregate
- * instance the command should be invoked on.
+ * Interface for resolving an aggregate identifier and expected version from a command that 
+ * identifies the aggregate instance the command should be invoked on.
  */
 export interface CommandTargetAggregateResolver {
   /**

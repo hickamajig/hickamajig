@@ -1,15 +1,17 @@
 import { Message } from '@goldsam/eventi-messaging';
+import { Type } from '@goldsam/eventi-common';
 
 /**
- * Represents an aggreate root. Implementations of this interface defer the actual handling of commands to a wrapped
- * instance of type {@code T} or one of its entities.
+ * Represents an aggreate root. 
+ * Implementations of this interface defer the actual handling of commands 
+ * to a wrapped instance of type {@code TAggregateRoot} or one of its entities.
  * 
- * When a command is dispatched to an aggregate, the aggregate instance is loaded and the related command
- * handler method is invoked. 
+ * When a command is dispatched to an aggregate, the aggregate instance is loaded and 
+ * the related command handler method is invoked. 
  *
- * @typeParam T The aggregate root type
+ * @typeParam TAggregateRoot The aggregate root type
  */
-export interface Aggregate<T> {
+export interface Aggregate<TAggregateRoot> {
 
     /**
      * The string representation of this aggregate's type. 
@@ -58,29 +60,29 @@ export interface Aggregate<T> {
     //  */
     // <R> R invoke(Function<T, R> invocation);
 
-    // /**
-    //  * Execute a method on the underlying aggregate or one of its instances.
-    //  * <p>
-    //  * Note that the use of this method is not recommended as the wrapped aggregate instance is not meant to be
-    //  * exposed. Relying on this method is commonly a sign of design smell.
-    //  *
-    //  * @param invocation The function that performs the invocation
-    //  */
-    // void execute(Consumer<T> invocation);
+    /**
+     * Execute a method on the underlying aggregate or one of its instances.
+     *
+     * Note that the use of this method is not recommended as the wrapped aggre
+     * gate instance is not meant to be exposed. Relying on this method is 
+     * commonly a sign of design smell.
+     *
+     * @param invocationCallback The function that performs the invocation
+     */
+    execute(invocationCallback: (aggregateRoot: TAggregateRoot) => void): void 
 
     /**
-     * Check if this aggregate has been deleted. This is checked by aggregate repositories when an aggregate is loaded.
-     * In case the repository is asked to load a deleted aggregate the repository will refuse by throwing an {@link
-     * org.axonframework.eventsourcing.AggregateDeletedException}.
+     * Check if this aggregate has been deleted. 
+     * This is checked by aggregate repositories when an aggregate is loaded.
+     * In case the repository is asked to load a deleted aggregate the repository 
+     * will refuse by throwing an {@link AggregateDeletedError}.
      *
      * @return {@code true} in case the aggregate was deleted, {@code false} otherwise
      */
     readonly isDeleted: boolean;
 
-    // /**
-    //  * Get the class type of the wrapped aggregate root that the Aggregate defers to for command handling.
-    //  *
-    //  * @return The aggregate root type
-    //  */
-     rootType();
+    /**
+     * The type of the wrapped aggregate root that this {@link Aggregate} defers to for command handling.
+     */
+    rootType: Type<TAggregateRoot>;
 }

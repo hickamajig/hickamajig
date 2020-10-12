@@ -1,7 +1,8 @@
 import { CommandMessage } from '@goldsam/eventi-messaging';
 import 'reflect-metadata';
 
-import { CommandTargetAggregateResolver, VersionedAggregateIdentifier } from './interfaces';
+import { CommandTargetAggregateResolver } from './command-target-aggregate-resolver.interface';
+import { VersionedAggregateIdentifier } from './versioned-aggregate-identifier.interface';
 
 const COMMAND_TARGET_AGGREGATE_METADATA_KEY = Symbol("CommandTargetAggregateMetadata");
 

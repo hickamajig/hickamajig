@@ -1,1 +1,2 @@
-export * from './message'
+export * from './message.interface'
+export * from './message-handler-proxy.interface';

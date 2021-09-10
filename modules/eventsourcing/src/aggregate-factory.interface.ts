@@ -1,5 +1,5 @@
-import { DomainEventMessage } from '@goldsam/eventi-messaging';
-import { Type } from '@goldsam/eventi-common';
+import { DomainEventMessage } from '@dendritic/messaging';
+import { Type } from '@dendritic/common';
 
 export interface AggregateFactory<TAggreateRoot> {
 

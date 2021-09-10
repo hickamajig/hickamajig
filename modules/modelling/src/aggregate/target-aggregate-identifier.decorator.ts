@@ -1,4 +1,4 @@
-import { CommandMessage } from '@goldsam/eventi-messaging';
+import { CommandMessage } from '@dendritic/messaging';
 import 'reflect-metadata';
 
 import { CommandTargetAggregateResolver } from './command-target-aggregate-resolver.interface';

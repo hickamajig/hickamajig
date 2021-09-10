@@ -1,11 +1,13 @@
-import { Type } from '@goldsam/eventi-common'
+import { Type } from '@dendritic/common'
 
 import { Message } from './message.interface'
 
 /**
  * Resolves {@link Message} handler method parameter values.
+ *
+ * @typeParam TParameter Parameter type
  */
-export interface ParameterResolver<T> {
+export interface ParameterResolver<TParameter> {
 
   /**
    * Resolves the parameter value to use when handling a given {@code message}, 
@@ -14,7 +16,7 @@ export interface ParameterResolver<T> {
    * @param message The message to resolve the value for.
    * @return the parameter value for the handler.
    */
-  resolveParameterValue(message: Message<any>): T | undefined
+  resolveParameterValue(message: Message<any>): TParameter | undefined
 
   /**
    * Indicates whether this resolver is capable of providing a value for a given {@code message}.

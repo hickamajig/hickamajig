@@ -1,4 +1,4 @@
-import { Type } from '@goldsam/eventi-common';
+import { Type } from '@dendritic/common';
 
 import { Message } from './message.interface';
 import { ParameterResolver } from './parameter-resolver.interface';

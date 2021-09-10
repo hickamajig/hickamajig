@@ -1,5 +1,5 @@
-import { Message } from '@goldsam/eventi-messaging';
-import { Type } from '@goldsam/eventi-common';
+import { Message } from '@dendritic/messaging';
+import { Type } from '@dendritic/common';
 
 /**
  * Represents an aggreate root. 

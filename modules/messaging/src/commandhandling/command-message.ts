@@ -1,4 +1,4 @@
-import { Message } from '../messaging/message';
+import { Message } from '../messaging/message.interface';
 
 /**
  * Represents a Message carrying a command as its payload. 

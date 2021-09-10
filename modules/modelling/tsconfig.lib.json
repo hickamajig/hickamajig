@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    // "baseUrl": "./",
+    "declaration": true,
+  },
+  "typedocOptions": {
+    "excludeExternals": true,
+    "excludeNotExported": true,
+    "excludePrivate": true,
+    "excludeProtected": true,
+    "includeDeclarations": false,
+    "mode": "library",
+    "name": "Eventi core library",
+    "plugin": "none",
+    "readme": "none",
+    "inputFiles": ["./src/index.ts"],
+    "exclude": "**/*+(.spec|.e2e).ts",
+    "out": "doc"
+  },
+  "exclude": ["**/*.spec.ts"],
+  "include": ["**/*.ts"]
+}

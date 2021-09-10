@@ -1,5 +1,5 @@
-import { Type } from '@goldsam/eventi-common';
-import { Message } from '@goldsam/eventi-messaging';
+import { Type } from '@dendritic/common';
+import { Message } from '@dendritic/messaging';
 import { Aggregate } from './aggregate-interface';
 
 // export class DecoratedAggregate<TAggregateRoot> implements Aggregate<TAggregateRoot> {

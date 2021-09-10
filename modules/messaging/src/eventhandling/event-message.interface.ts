@@ -14,3 +14,5 @@ export interface EventMessage<TPayload> extends Message<TPayload> {
    */
   readonly timestamp: Date;
 }
+
+export const EventMessage = Symbol('EventMessage');

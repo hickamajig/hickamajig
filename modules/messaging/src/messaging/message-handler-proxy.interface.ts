@@ -1,7 +1,12 @@
-import { Type } from '@goldsam/eventi-common';
+import { Type } from '@dendritic/common';
 
 import { Message } from './message.interface';
 
+/**
+ * Proxy through which messsage handling is dispatched which targets a specifed object instance. 
+ * 
+ * @typeParam T Type of target to which to message handling is dispatched/.    
+ */
 export interface MessageHandlerProxy<T> {
   /**
    * The payload type of messages that can be processed by this handler.

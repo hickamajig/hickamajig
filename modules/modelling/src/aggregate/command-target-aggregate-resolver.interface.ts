@@ -1,4 +1,4 @@
-import { CommandMessage } from '@goldsam/eventi-messaging';
+import { CommandMessage } from '@dendritic/messaging';
 
 import { VersionedAggregateIdentifier } from './versioned-aggregate-identifier.interface';
 

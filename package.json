@@ -1,5 +1,5 @@
 {
-  "name": "@goldsam/eventi",
+  "name": "@dendritic/root",
   "version": "0.1.0",
   "description": "An event sourcing framework written in TypeScript",
   "main": "index.js",
@@ -11,12 +11,13 @@
     "modules/*"
   ],
   "scripts": {
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "lerna bootstrap --hoist",
     "build": "lerna run build",
     "test": "lerna run test -- --passWithNoTests",
-    "docs": "lerna run docs"
+    "docs": "lerna run docs",
+    "tsc": "tsc"
   },
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^4.0.0"
   }
 }

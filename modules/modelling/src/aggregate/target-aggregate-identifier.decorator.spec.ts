@@ -1,5 +1,5 @@
 import { TargetAggregateIdentifier, TargetAggregateVersion, decoratorCommandTargetAggregateResolver } from './target-aggregate-identifier.decorator';
-import { CommandMessage } from '@goldsam/eventi-messaging';
+import { CommandMessage } from '@dendritic/messaging';
 
 class MyCommandPayload {
 

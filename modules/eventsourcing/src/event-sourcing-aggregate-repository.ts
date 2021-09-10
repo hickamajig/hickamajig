@@ -1,4 +1,4 @@
-import { Aggregate, AggregateRepository } from '@goldsam/eventi-modelling';
+import { Aggregate, AggregateRepository } from '@dendritic/modelling';
 
 import { AggregateFactory } from './aggregate-factory.interface';
 import { EventStore } from './event-store.interface'; 

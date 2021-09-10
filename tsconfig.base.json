@@ -1,0 +1,38 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "noEmit": false,
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "ES6",
+    "module": "CommonJS",
+    "lib": ["ES7"],
+    "noImplicitAny": false,
+    "noUnusedLocals": false,
+    "removeComments": true,
+    "noLib": false,
+    "allowJs": false,
+    "outDir": "dist",
+    "baseUrl": ".",
+    // "moduleResolution": "node",
+    // "skipLibCheck": true,
+    // "skipDefaultLibCheck": true,
+    "importHelpers": true,
+    "paths": {
+      "@dendritic/common": ["./modules/common/src/index.ts"],
+      "@dendritic/eventsourcing": ["./modules/eventsourcing/src/index.ts"],
+      "@dendritic/messaging": ["./modules/messaging/src/index.ts"],
+      "@dendritic/modelling": ["./modules/modelling/src/index.ts"]
+    }
+  },
+  "include": ["packages/**/*", "integration/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
+
+
+
+
+

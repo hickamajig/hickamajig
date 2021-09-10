@@ -1,4 +1,4 @@
-import { DomainEventMessage } from '@goldsam/eventi-messaging';
+import { DomainEventMessage } from '@dendritic/messaging';
 
 export interface DomainEventStream extends AsyncIterator<DomainEventMessage<any>> {
   
